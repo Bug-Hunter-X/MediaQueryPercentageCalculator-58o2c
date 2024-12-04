@@ -1,0 +1,14 @@
+/* mediaQueryCalcSolution.css */
+
+/* Instead of relying on percentage calculations within calc() in the media query,
+   use explicit pixel values or viewport units (vw, vh) for more reliable results.
+   This avoids potential calculation errors associated with percentage-based calculations
+   within media queries, which might be interpreted differently by different browsers. */
+
+@media (max-width: 768px) {
+  .container {
+    width: calc(100vw - 40px); /* Use vw for viewport width and a fixed pixel offset */
+    /* Alternatively, you could use fixed pixel values if you prefer a less responsive design */
+    /* width: 600px; */
+  }
+}
